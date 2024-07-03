@@ -1,0 +1,14 @@
+list1= [ 2, 3, 4, 10, 40 ]
+elem_to_search = 40
+low=0
+high=len(list1)-1
+while low <= high:
+    mid = (high + low) // 2
+    if(list1[mid]==elem_to_search):
+        print('element present at',mid)
+        break
+    elif list1[mid] < elem_to_search:
+        low = mid + 1
+    else:
+        high=mid-1
+        print('element not found')

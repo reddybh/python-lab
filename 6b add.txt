@@ -1,0 +1,24 @@
+L1 = [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
+L2 = [[1, 2, 1], [2, 2, 3], [3, 2, 1]]
+Result = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+# Iterate through rows and columns of the matrices
+for i in range(len(L1)):
+    for j in range(len(L1[0])):
+        Result[i][j] = L1[i][j] + L2[i][j]
+print('Matrix L1:')
+for row in L1:
+    for element in row:
+        print(element, end=' ')
+    print()
+    
+print('\nMatrix L2:')
+for row in L2:
+    for element in row:
+        print(element, end=' ')
+    print()
+    
+print('Addition of two matrices:')
+for row in Result:
+    for element in row:
+        print(element, end=' ')
+    print()

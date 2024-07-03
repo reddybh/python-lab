@@ -1,0 +1,20 @@
+def binary_search(list, low, high, elem_to_search):
+    if high >= low:
+        mid = (low + high) // 2
+        if elem_to_search == list1[mid]:
+            return mid
+        elif elem_to_search < list1[mid]:
+            return binary_search(list, low, mid-1, elem_to_search)
+        else:
+            return -1
+            
+list1 = ["Ram","Sita","Veena"]
+low=0
+high=len(list1)-1
+elem_to_search = "Sita"
+
+result = binary_search(list1,low,high,elem_to_search)
+if result == -1:
+    print("Element not found!")
+else:
+    print("Element found at index ", result)
